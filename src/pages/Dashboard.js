@@ -47,6 +47,7 @@ export default function Dashboard() {
   const empty = { name: "", platform: "", startDate: "", endDate: "", email: "", phone: "", cost: "", notes: "" };
   const [form, setForm] = useState(empty);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { if (user) fetchSubs(); }, [user]);
 
   const fetchSubs = async () => {
