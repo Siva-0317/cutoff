@@ -100,7 +100,7 @@ export default function ExtensionPopup() {
             <input type="date" style={inp} name="endDate" value={form.endDate} onChange={handleChange} required />
           </div>
           <div style={{ flex: 1 }}>
-            <label style={{ fontSize: 12, fontWeight: "bold", color: "#555" }}>Cost</label>
+            <label style={{ fontSize: 12, fontWeight: "bold", color: "#555" }}>Cost (₹)</label>
             <input type="number" style={inp} name="cost" value={form.cost} onChange={handleChange} />
           </div>
         </div>
