@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Landing from "./pages/Landing";
 
 function ProtectedRoute({ children }) {
   const [user, loading] = useAuthState(auth);
@@ -17,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
