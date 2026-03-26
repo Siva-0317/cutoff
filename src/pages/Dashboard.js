@@ -222,7 +222,7 @@ export default function Dashboard() {
               </div>
 
               <div style={{ marginBottom: 14 }}>
-                <label style={lbl}>Monthly Cost (₹)</label>
+                <label style={lbl}>Monthly Cost (Rs)</label>
                 <input style={inp} type="number" name="cost" placeholder="15.99" value={form.cost} onChange={handleChange} />
               </div>
 
@@ -291,7 +291,7 @@ export default function Dashboard() {
                         {sub.platform && <div><span style={{ fontWeight: 700, color: "#222" }}>Platform: </span>{sub.platform}</div>}
                         <div><span style={{ fontWeight: 700, color: "#222" }}>Email: </span>{sub.email}</div>
                         {sub.phone && <div><span style={{ fontWeight: 700, color: "#222" }}>Phone: </span>{sub.phone}</div>}
-                        {sub.cost  && <div><span style={{ fontWeight: 700, color: "#222" }}>Cost: </span>₹{sub.cost}/mo</div>}
+                        {sub.cost  && <div><span style={{ fontWeight: 700, color: "#222" }}>Cost: </span>Rs{sub.cost}/mo</div>}
                         {sub.notes && <div><span style={{ fontWeight: 700, color: "#222" }}>Notes: </span>{sub.notes}</div>}
                       </div>
 
