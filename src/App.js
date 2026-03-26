@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
+import ExtensionPopup from "./pages/ExtensionPopup";
 
 function ProtectedRoute({ children }) {
   const [user, loading] = useAuthState(auth);
@@ -15,6 +16,13 @@ function ProtectedRoute({ children }) {
 }
 
 function App() {
+  // If ?ext=true is in the URL, render the Chrome Extension Popup instead of the full app
+  const isExt = new URLSearchParams(window.location.search).get("ext") === "true";
+  
+  if (isExt) {
+    return <ExtensionPopup />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>
