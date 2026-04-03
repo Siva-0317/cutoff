@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 🛡️ Cutoff - Subscription Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Cutoff** is a premium subscription tracking application that helps you stay on top of your recurring services and avoid unexpected charges with automated email reminders.
 
-## Available Scripts
+## 🚀 Key Features
+- **Smart Reminders**: Automated emails sent 5, 3, and 1 day before any subscription expires.
+- **Unified Dashboard**: Manage all your subscriptions (Netflix, Spotify, Gym, etc.) in one place.
+- **Spending Insights**: Track your monthly costs and active subscriptions at a glance.
+- **Chrome Extension Support**: Slimmed-down popup view for quick additions.
 
-In the project directory, you can run:
+## 📖 Documentation
+For a deep dive into the system architecture, frontend/backend implementation details, and setup process, please refer to the:
+- **[Detailed Architecture Documentation (ARCHITECTURE.md)](./ARCHITECTURE.md)**
 
-### `npm start`
+## 🛠️ Tech Stack
+- **Frontend**: React 19, React Router, Firebase JS SDK
+- **Backend**: Firebase Firestore, Firebase Auth
+- **Automation**: GitHub Actions (Cron), Node.js, Nodemailer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚦 Quick Start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Install Dependencies
+```bash
+npm install
+cd scripts
+npm install
+cd ..
+```
 
-### `npm test`
+### 2. Configure Firebase
+Update the Firebase configuration in `src/firebase.js` or provide environment variables for your project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Run Locally
+```bash
+npm start
+```
 
-### `npm run build`
+## 🤖 Automation Notes
+The reminder system is powered by a GitHub Action defined in `.github/workflows/reminders.yml`. It runs daily to check for expiring subscriptions and sends notifications via Gmail SMTP.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+*Built with React & Firebase*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
